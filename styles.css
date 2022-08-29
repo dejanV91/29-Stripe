@@ -114,7 +114,23 @@ body::before{
     height: 390px;
 }
 
+.toggle-section{
+    display: none;
+}
+
 @media (max-width:800px) {
+    .center-section{
+        min-width: 85%;
+    }
+    .hero-center{
+        display: flex;
+    }
+    .hero-title h2{
+        max-width: 500px;
+    }
+    .subtitle{
+        max-width: 500px;
+    }
     .hero-image{
         display: none;
     }
@@ -127,5 +143,8 @@ body::before{
     }
     .sign-section{
         display: none;
+    }
+    .toggle-section{
+        display: block;
     }
 }
