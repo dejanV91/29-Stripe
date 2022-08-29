@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100%;
+    min-width: 100%;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100w;
+    display: flex;
+    justify-content: center;
+}
+
+body::before{
+    content: " ";
+    background: url(./img/hero.svg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: contain;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+}
+
+.center-section{
+    margin: 0 50px;
+    max-width: 1100px;
+}
+
+.header-section{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.nav-bar{
+    width: 400px;
+    padding-bottom: 10px;
+}
+
+.nav-bar ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar ul li{
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: white;
+    cursor: default;
+}
+
+.btn{
+    color: white;
+    background-color: rgb(27, 27, 27);
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    transition: all 0.3s linear;
+    border: none;
+    font-weight: 100;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: darkcyan;
+}
+
+.hero-center{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.hero-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-title h2{
+    font-size: 3.5rem;
+    line-height: 3.2rem;
+    margin-bottom: 2rem;
+}
+
+.subtitle{
+    color: rgb(134, 134, 134);
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img{
+    height: 390px;
+}
+
+@media (max-width:800px) {
+    .hero-image{
+        display: none;
+    }
+    body::before{
+        background-size: cover;
+        max-height: 65%;
+    }
+    .nav-bar{
+        display: none;
+    }
+    .sign-section{
+        display: none;
+    }
+}
