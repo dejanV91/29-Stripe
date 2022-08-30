@@ -148,3 +148,53 @@ body::before{
         display: block;
     }
 }
+
+/* ====== LINKS ======= */
+
+.submenu{
+    position: absolute;
+    background-color: white;
+    height: auto;
+    padding: 30px;
+    border-radius: 10px;
+    top: 66px;
+    transform: translateX(-30%);
+}
+
+.submenu::before{
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+}
+
+.title-submenu{
+   margin-bottom: 30px;
+   text-transform: capitalize;
+   font-size: 1.4rem;
+}
+
+.links{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 6rem;
+}
+
+.links a{
+    text-decoration: none;
+    color: rgb(105, 104, 119);
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.links a span{
+    margin-right: 15px;
+}
