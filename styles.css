@@ -43,11 +43,11 @@ body::before{
     margin-top: 20px;
     align-items: center;
     margin-bottom: 4rem;
+    margin-bottom: 10px;
 }
 
 .nav-bar{
     width: 400px;
-    padding-bottom: 10px;
 }
 
 .nav-bar ul{
@@ -62,6 +62,7 @@ body::before{
     text-transform: capitalize;
     color: white;
     cursor: default;
+    padding-bottom: 10px;
 }
 
 .btn{
@@ -152,13 +153,19 @@ body::before{
 /* ====== LINKS ======= */
 
 .submenu{
+    display: none;
     position: absolute;
     background-color: white;
     height: auto;
     padding: 30px;
     border-radius: 10px;
     top: 66px;
-    transform: translateX(-30%);
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.show{
+    display: block;
 }
 
 .submenu::before{
@@ -182,8 +189,17 @@ body::before{
 
 .links{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     column-gap: 6rem;
+}
+
+.col-2{
+    grid-template-columns: repeat(2, 1fr);
+}
+.col-3{
+    grid-template-columns: repeat(3, 1fr);
+}
+.col-4{
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .links a{
