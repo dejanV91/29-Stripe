@@ -6,11 +6,25 @@ const subElement = document.querySelector(".submenu");
 const closeBtn = document.getElementById("close");
 const menuBtn = document.querySelector("#menu");
 const sidebar = document.querySelector(".sidebar");
+const sidebarCenter = document.querySelector(".sidebar-center");
 
 // sidebar
-menuBtn.addEventListener("click", () => {
-    sidebar.classList.add("view");
-});
+sidebarCenter.innerHTML = sublinks
+    .map((item) => {
+        const {page, links} = item;
+        return `<article class="single-sidebar">
+                    <h4 class="sidebar-title">${page}</h4>
+                    <div class="list">
+                    ${links.
+                        map((single) => {
+                            return ` <a href="${single.url}">
+                                        <span class="material-symbols-outlined">${single.icon}</span>
+                                        ${single.label}
+                                    </a>`
+                        }).join("")}
+                    </div>
+                </article>`
+    }).join("");
 
 // submenu elemnets
 submenu.forEach((btn)=>{
@@ -60,6 +74,10 @@ centerSection.addEventListener("mouseover", (e) => {
     if (!e.target.classList.contains("submenus")) {
         subElement.classList.remove("show");   
     }
+});
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.add("view");
 });
 
 closeBtn.addEventListener("click", () => {

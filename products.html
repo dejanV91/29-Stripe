@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <!-- STYLE -->
+    <style>
+        .modal{
+            background-color: beige;
+            width: 30%;
+            height: 200px;
+            margin: 150px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+        }
+        @keyframes examp {
+            0% {transform: scale(0.9)}
+            50% {transform: scale(1)}
+            100% {transform: scale(0.9)}
+        }
+        .back a{
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: cursive,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: black;
+        }
+
+        .back{
+            animation-name: examp;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+       
+    </style>
+    <!-- end STYLE -->
+</head>
+<body>
+    <div class="modal">
+        <p class="back"><a href="index.html">back to home</a></p>
+    </div>
+</body>
+</html>
