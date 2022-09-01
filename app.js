@@ -3,6 +3,14 @@ import sublinks from "./data.js";
 const submenu = document.querySelectorAll(".submenus");
 const centerSection = document.querySelector(".center-section");
 const subElement = document.querySelector(".submenu");
+const closeBtn = document.getElementById("close");
+const menuBtn = document.querySelector("#menu");
+const sidebar = document.querySelector(".sidebar");
+
+// sidebar
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.add("view");
+});
 
 // submenu elemnets
 submenu.forEach((btn)=>{
@@ -46,9 +54,14 @@ submenu.forEach((btn)=>{
         }
     });
 });
+
+// EVENTS
 centerSection.addEventListener("mouseover", (e) => {
     if (!e.target.classList.contains("submenus")) {
         subElement.classList.remove("show");   
     }
-    console.log(e.target);
+});
+
+closeBtn.addEventListener("click", () => {
+    sidebar.classList.remove("view");
 });

@@ -214,3 +214,81 @@ body::before{
 .links a span{
     margin-right: 15px;
 }
+
+/* ===== SIDEBAR ======= */
+.sidebar{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+    visibility: hidden;
+    transform: scale(0);
+}
+
+.view{
+    visibility: visible;
+    transform: scale(1);
+}
+
+.sidebar-content{
+    background-color: white;
+    min-height: 95%;
+    width: 90%;
+    max-width: 620px;
+    position: absolute;
+    border-radius: 15px;
+}
+
+.xicon{
+    display: flex;
+    justify-content: end;
+    padding: 20px 15px;
+}
+
+.xicon span{
+    font-weight: 900;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.sidebar-center{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding: 0 30px;
+}
+
+.single-sidebar{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.sidebar-title{
+    text-transform: capitalize;
+}
+
+.list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5px;
+}
+
+.list a{
+    color: rgb(150, 149, 149);
+    text-decoration: none;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.list a span{
+    font-size: 1.2rem;
+}
